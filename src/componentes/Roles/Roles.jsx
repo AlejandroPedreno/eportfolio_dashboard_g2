@@ -1,9 +1,9 @@
-function Roles() {
-  return (
-    <>
-      <aside>ROLES</aside>
-    </>
-  )
-}
+import './Roles.css';
 
-export default Roles
+export default function Roles(props) {
+    return (
+        <div className="roles p-3 h-100">
+            <p>ROLES {props.menu}</p>
+        </div>
+    );
+}

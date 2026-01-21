@@ -1,22 +1,24 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import Cabecera from './componentes/Cabecera/Cabecera'
 import Dashboard from './componentes/Dashboard/Dashboard'
 import Roles from './componentes/Roles/Roles'
 
 function App() {
-  const [count, setCount] = useState(0)
+
+  let usuario = "Alejandro";
+  let token = "12345";
+  let menu = "DAW";
 
   return (
     <>
-      <div></div>
-      <Cabecera></Cabecera>
-      <Dashboard></Dashboard>
-      <Roles></Roles>
+      <Cabecera usuario={usuario} />
+
+      <div className="layout">
+        <Roles menu={menu} />
+        <Dashboard token={token} />
+      </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

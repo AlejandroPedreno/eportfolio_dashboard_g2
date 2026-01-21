@@ -1,9 +1,9 @@
-function Cabecera() {
-  return (
-    <>
-      <header>HEADER</header>
-    </>
-  )
-}
+import './Cabecera.css';
 
-export default Cabecera
+export default function Cabecera(props) {
+    return (
+        <div className="cabecera text-center pb-5">
+            HEADER {props.usuario}
+        </div>
+    );
+}

@@ -1,50 +1,9 @@
-function Dashboard(){
+import './Dashboard.css';
 
-    return(
-        <>
-            <main>DASHBOARD</main>
-        </>
-    )
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+export default function Dashboard(props) {
+    return (
+        <div className="dashboard p-3 h-100">
+            MAIN {props.token}
+        </div>
+    );
 }
-
-
-
-export default Dashboard
