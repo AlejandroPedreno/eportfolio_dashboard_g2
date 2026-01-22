@@ -1,9 +1,15 @@
 import './Dashboard.css';
+import { useContext } from 'react';
+import TokenContext from '../../context/TokenContext';
 
-export default function Dashboard(props) {
+function Dashboard() {
+
+    const token = useContext(TokenContext);
+
     return (
         <div className="dashboard p-3 h-100">
-            MAIN {props.token}
+            MAIN {token}
         </div>
     );
 }
+export default Dashboard;
