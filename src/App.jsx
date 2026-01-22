@@ -8,6 +8,7 @@ import Roles from './componentes/Roles/Roles'
 
 //Contexto
 import TokenContext from './context/TokenContext';
+import UserContext from './context/UserContext';
 
 //Hooks
 import { useState } from "react";
@@ -25,10 +26,12 @@ function App() {
   return (
     <TokenContext.Provider value={token}>
       <Cabecera usuario={user} />
-      <div className="layout">
-        <Roles menu={menu} />
-        <Dashboard/>
-      </div>
+      <UserContext.Provider value={user}>
+        <div className="layout">
+          <Roles menu={menu} />
+          <Dashboard />
+        </div>
+      </UserContext.Provider>
     </TokenContext.Provider>
   );
 }
