@@ -66,3 +66,36 @@ body,
 .container-fluid {
   padding: 0;
 }
+
+.contenedor-flex {
+  display: flex;
+  /* Activa Flexbox */
+  width: 100%;
+  /* Ocupa todo el ancho disponible */
+}
+
+.columna-30 {
+  flex: 0 0 30%;
+  /* Base fija del 30%, no crece ni encoge */
+  /* O puedes usar: width: 30%; */
+  background-color: #f0f0f0;
+  /* Para visualizar */
+  padding: 15px;
+}
+
+.columna-70 {
+  flex-grow: 1;
+  /* Crece para ocupar el espacio restante */
+  /* O puedes usar: width: 70%; */
+  background-color: #e0e0e0;
+  /* Para visualizar */
+  padding: 15px;
+}
+
+.roles .acordeon {
+  position: sticky; 
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+}
