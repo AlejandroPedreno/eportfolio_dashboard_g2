@@ -1,15 +1,15 @@
 import { useContext, useState } from "react";
-import mockRoles from "../mock/mock-roles";
+import mocksImpartidos from "../mock/mock-modulosImpartidos";
 import UserContext from "../context/UserContext";
 
-function useRoles() {
+function useMisModulosImpartidos() {
 
     const usuarioActual = useContext(UserContext);
 
     const [buscando, setBuscando] = useState(false);
 
     const [lista, setLista] = useState(
-        mockRoles[usuarioActual]?.roles || []
+        mocksImpartidos[usuarioActual]?.lista || []
     );
 
     return {
@@ -17,5 +17,4 @@ function useRoles() {
         lista
     };
 }
-
-export default useRoles;
+export default useMisModulosImpartidos;
