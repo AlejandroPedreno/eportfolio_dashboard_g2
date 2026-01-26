@@ -2,6 +2,7 @@ import './Dashboard.css';
 import { useContext } from 'react';
 import TokenContext from '../../context/TokenContext';
 import UserContext from '../../context/UserContext';
+import NuevaEvidencia from '../Evidencia/NuevaEvidencia';
 
 function Dashboard() {
 
@@ -12,6 +13,7 @@ function Dashboard() {
         <div className="dashboard p-3 h-100">
             MAIN {token} <br />
             Prueba usuario: {user}  
+            <NuevaEvidencia />
         </div>
     );
 }
