@@ -17,5 +17,4 @@ function useRoles() {
         lista
     };
 }
-
 export default useRoles;

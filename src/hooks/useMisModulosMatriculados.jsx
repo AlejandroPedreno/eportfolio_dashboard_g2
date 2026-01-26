@@ -1,15 +1,15 @@
 import { useContext, useState } from "react";
-import mockImpartidos from "../mock/mock-impartidos";
+import mockMatriculados from "../mock/mock-matriculados";
 import UserContext from "../context/UserContext";
 
-function useMisModulosImpartidos() {
+function useMisModulosMatriculados() {
 
     const usuarioActual = useContext(UserContext);
 
     const [buscando, setBuscando] = useState(false);
 
     const [lista, setLista] = useState(
-        mockImpartidos[usuarioActual]?.lista || []
+        mockMatriculados[usuarioActual]?.lista || []
     );
 
     return {
@@ -17,4 +17,4 @@ function useMisModulosImpartidos() {
         lista
     };
 }
-export default useMisModulosImpartidos;
+export default useMisModulosMatriculados;
