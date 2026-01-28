@@ -4,13 +4,12 @@ import UserContext from '../../context/UserContext';
 import Acordeon from '../Acordeon/Acordeon';
 import opcionesMenu from '../../mock/mock-administrador';
 import { BrowserRouter } from 'react-router-dom';
-import roles from '../../mock/mock-roles';
+import useRoles from '../../hooks/useRoles';
 
 function Roles(props) {
 
     const user = useContext(UserContext);
-
-    const rolesUsuario = roles[user]?.roles || [];
+    const { lista: rolesUsuario } = useRoles();
 
     return (
         <div className="roles p-3 h-100">
