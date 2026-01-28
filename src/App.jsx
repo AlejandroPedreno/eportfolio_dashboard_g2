@@ -20,7 +20,7 @@ function App() {
 
   const token = "12345";
 
-  let valorInicialUser = "Alejandro";
+  let valorInicialUser = "Alberto";
   const [user, setUser] = useState(valorInicialUser);
 
   return (
