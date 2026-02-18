@@ -10,33 +10,55 @@ const Acordeon = (props) => {
         return (
             <AccordionDetails key={opcion.nombre}>
                 <Link to={opcion.ruta}>{opcion.nombre}</Link>
-
+            </AccordionDetails>
+        );
+    }
+    
+    function opcionImpartido(modulo){
+        return (
+            <AccordionDetails key={modulo.id}>
+                <Link to={"/funcionalidaddocente/" + modulo.id}>{modulo.nombre}</Link>
             </AccordionDetails>
         );
     }
 
-    function mostrarAcordeon(opcionMenu, index) {
+    function opcionEstudiante(modulo){
         return (
-            <Accordion key={index}>
-                <AccordionSummary
-                    expandIcon={"^"}
-                    aria-controls="panel1-content"
-                    id="panel1-header"
-
-                >
-                    <Typography component="span" >{props.rol}</Typography>
-                </AccordionSummary>
-                {props.rol === "administrador" && opcionMenu.administrador.map(opcionAcordeon)}
-            </Accordion>
+            <AccordionDetails key={modulo.id}>
+                <Link to={"/funcionalidadestudiante/" + modulo.id}>{modulo.nombre}</Link>
+            </AccordionDetails>
         );
     }
 
-    return (
-        <>
+function mostrarAcordeon(opcionMenu, index) {
 
-            {props.lista.map(mostrarAcordeon)}
-        </>
+    const modulos = opcionMenu.impartidos || [];
+    const opcionesAdmin = opcionMenu.administrador || [];
+    const opcionesEstudiante = opcionMenu.estudiante || [];
+
+    return (
+        <Accordion key={index}>
+            <AccordionSummary
+                expandIcon={"^"}
+                aria-controls="panel-content"
+                id="panel-header"
+            >
+                <Typography component="span">{props.rol}</Typography>
+            </AccordionSummary>
+            {props.rol === "administrador" && opcionesAdmin.map(opcionAcordeon)}
+            {props.rol === "docente" && modulos.map(opcionImpartido)}
+            {props.rol === "estudiante" && opcionesEstudiante.map(opcionEstudiante)}
+
+        </Accordion>
     );
+}
+
+
+return (
+  <>
+    {(props.lista || []).map(mostrarAcordeon)}
+  </>
+);
 };
 
 export default Acordeon;
