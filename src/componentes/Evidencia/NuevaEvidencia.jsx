@@ -16,8 +16,7 @@ function NuevaEvidencia() {
 
   return (
     <div>
-
-      <SelectorTareaRA onSelectTarea={handleTareaSeleccionada} />
+        <SelectorTareaRA onSelectTarea={handleTareaSeleccionada} />
       <br />
       <NuevaEvidenciaForm
         tarea={tareaSeleccionada}

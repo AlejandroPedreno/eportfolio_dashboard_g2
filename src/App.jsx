@@ -17,6 +17,7 @@ import { Routes, Route, Outlet } from 'react-router-dom';
 
 import FuncionalidadEstudiante from './paginas/FuncionalidadEstudiante/FuncionalidadEstudiante';
 import FuncionalidadDocente from './paginas/FuncionalidadDocente/FuncionalidadDocente';
+import PaginaFamiliasProfesionales from './paginas/PaginaFamiliasProfesionales/PaginaFamiliasProfesionales';
 
 
 function App() {
@@ -48,6 +49,7 @@ function App() {
         <Route index element={<Dashboard />} /> {/* Ruta "/" */}
         <Route path="funcionalidadestudiante/:id" element={<FuncionalidadEstudiante />} /> {/* Ruta dinámica */}
         <Route path="funcionalidaddocente/:id" element={<FuncionalidadDocente />} /> {/* Ruta dinámica */}
+        <Route path="familiasprofesionales" element={<PaginaFamiliasProfesionales />} /> {/* Ruta para familias profesionales */}
         <Route path=":nombre" element={<Dashboard />} /> {/* Ruta dinámica para cualquier otro nombre */}
       </Route>
     </Routes>
