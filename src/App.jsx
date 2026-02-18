@@ -48,6 +48,7 @@ function App() {
         <Route index element={<Dashboard />} /> {/* Ruta "/" */}
         <Route path="funcionalidadestudiante/:id" element={<FuncionalidadEstudiante />} /> {/* Ruta dinámica */}
         <Route path="funcionalidaddocente/:id" element={<FuncionalidadDocente />} /> {/* Ruta dinámica */}
+        <Route path=":nombre" element={<Dashboard />} /> {/* Ruta dinámica para cualquier otro nombre */}
       </Route>
     </Routes>
   );
