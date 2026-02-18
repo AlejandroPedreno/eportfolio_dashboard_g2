@@ -16,6 +16,7 @@ import { useState } from "react";
 import { Routes, Route, Outlet } from 'react-router-dom';
 
 import FuncionalidadEstudiante from './paginas/FuncionalidadEstudiante/FuncionalidadEstudiante';
+import FuncionalidadDocente from './paginas/FuncionalidadDocente/FuncionalidadDocente';
 
 
 function App() {
@@ -46,6 +47,7 @@ function App() {
       <Route path="/" element={<Layout user={user} menu={menu} token={token} />}>
         <Route index element={<Dashboard />} /> {/* Ruta "/" */}
         <Route path="funcionalidadestudiante/:id" element={<FuncionalidadEstudiante />} /> {/* Ruta dinámica */}
+        <Route path="funcionalidaddocente/:id" element={<FuncionalidadDocente />} /> {/* Ruta dinámica */}
       </Route>
     </Routes>
   );
