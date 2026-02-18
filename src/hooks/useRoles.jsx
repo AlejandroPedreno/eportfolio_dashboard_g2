@@ -15,7 +15,6 @@ function useRoles() {
         getAllRoles()
             .then((data) => {
 
-                // Buscar el usuario en el array
                 const usuario = data.find(
                     (u) => u.name === usuarioActual
                 );
