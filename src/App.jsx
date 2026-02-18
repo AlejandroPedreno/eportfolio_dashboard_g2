@@ -25,7 +25,7 @@ function App() {
 
   const token = "12345";
 
-  let valorInicialUser = "Victor";
+  let valorInicialUser = "Víctor";
   const [user, setUser] = useState(valorInicialUser);
 
   function Layout({ user, menu, token }) {

@@ -1,6 +1,6 @@
 const modulosMatriculados =  {   
 
-				Victor:		{buscando: false,
+				Víctor:		{buscando: false,
 								lista : [{id : 12,
 										  ciclo_formativo_id : 91,
 										  nombre: "Desarrollo web en entorno cliente",
